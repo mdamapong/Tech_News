@@ -2,14 +2,15 @@ import React from 'react';
 import { NewsContextProvider } from './NewsContext';
 import News from '../components/News';
 import Layout from '../components/layout';
-import { StaticImage } from 'gatsby-plugin-image';
 
-function IndexPage() {
+function Newspage() {
 	return (
 		<Layout pageTitle='Tesla Today'>
-			<p>I'm making this by following the Gatsby Tutorial.</p>
+			<NewsContextProvider>
+				<News />
+			</NewsContextProvider>
 		</Layout>
 	);
 }
 
-export default IndexPage;
+export default Newspage;
