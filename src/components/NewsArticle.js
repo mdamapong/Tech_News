@@ -7,11 +7,11 @@ function NewsArticle({ data }) {
 			<span className='news__author'>{data.author}</span> <br />
 			<span className='news__published'>{data.publishedAt}</span>
 			<span className='news__source'>{data.source.name}</span>
-			<td
+			{/* <td
 				className='more__info'
 				onClick={() => window.open(`${data.url}`, '_blank')}>
 				More Info
-			</td>
+			</td> */}
 		</div>
 	);
 }
