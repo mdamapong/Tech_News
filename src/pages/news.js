@@ -1,5 +1,5 @@
 import React from 'react';
-import { NewsContextProvider } from './NewsContext';
+import { NewsContextProvider } from '../components/NewsContext';
 import News from '../components/News';
 import Layout from '../components/layout';
 
