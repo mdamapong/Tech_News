@@ -1,11 +1,13 @@
-.container {
+.container, .indeximg {
     margin: auto;
     max-width: 500px;
     font-family: sans-serif;
+    
 }
 
 .heading {
-    color: red;
+    font-family: 'Dancing Script',
+    cursive;
 }
 
 .nav-links {
