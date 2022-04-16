@@ -20,39 +20,47 @@ const Layout = ({ pageTitle, children }) => {
 	`);
 
 	return (
-		<div className={container}>
-			<title>
-				{pageTitle} | {data.site.siteMetadata.title}
-			</title>
-			<nav>
-				<ul className={navLinks}>
-					<li className={navLinkItem}>
-						<Link to='/' className={navLinkText}>
-							Home
-						</Link>
-					</li>
-					<li className={navLinkItem}>
-						<Link to='/news' className={navLinkText}>
-							News
-						</Link>
-					</li>
-					<li className={navLinkItem}>
-						<Link to='/about' className={navLinkText}>
-							About
-						</Link>
-					</li>
-					<li className={navLinkItem}>
-						<Link to='/contact' className={navLinkText}>
-							Contact
-						</Link>
-					</li>
-				</ul>
-			</nav>
-			<main>
-				<h1 className={heading}>{pageTitle}</h1>
-				{children}
-			</main>
-		</div>
+		<>
+			<div className={container}>
+				<title>
+					{pageTitle} | {data.site.siteMetadata.title}
+				</title>
+				<p>{data.site.siteMetadata.title}</p>
+				<nav>
+					<ul className={navLinks}>
+						<li className={navLinkItem}>
+							<Link to='/' className={navLinkText}>
+								Home
+							</Link>
+						</li>
+						<li className={navLinkItem}>
+							<Link to='/news' className={navLinkText}>
+								News
+							</Link>
+						</li>
+						<li className={navLinkItem}>
+							<Link to='/images' className={navLinkText}>
+								Images
+							</Link>
+						</li>
+						<li className={navLinkItem}>
+							<Link to='/about' className={navLinkText}>
+								About
+							</Link>
+						</li>
+						<li className={navLinkItem}>
+							<Link to='/contact' className={navLinkText}>
+								Contact
+							</Link>
+						</li>
+					</ul>
+				</nav>
+				<main>
+					<h1 className={heading}>{pageTitle}</h1>
+					{children}
+				</main>
+			</div>
+		</>
 	);
 };
 export default Layout;
